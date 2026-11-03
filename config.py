@@ -19,7 +19,7 @@ RERANKER_DEVICE = "cpu"    # switch to "cpu" if CUDA unavailable
 
 # --- LLM via Groq ---
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-GROQ_MODEL   = "llama-3.1-8b-instant"
+GROQ_MODEL   = "openai/gpt-oss-120b"
 
 # --- Chunking ---
 CHUNK_SIZE    = 1500    # max characters per chunk
