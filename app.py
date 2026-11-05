@@ -13,7 +13,7 @@ st.sidebar.caption("Two-Stage Retrieval RAG System")
 
 selected_page = st.sidebar.radio(
     "Go to:",
-    ["Ask a Question", "Document Library", "Evaluation Dashboard"],
+    ["🔍 Ask a Question", "📄 Document Library", "📊 Evaluation Dashboard"],
     index=0
 )
 
