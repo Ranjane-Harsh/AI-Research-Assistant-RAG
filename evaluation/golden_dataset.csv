@@ -1,0 +1,6 @@
+question,ground_truth
+"What was the PUMA 560 robot used for in surgery and in what year was it introduced?","In 1985, PUMA 560 was the first used robot in surgery to perform a neural biopsy with great precision using a CT scan."
+"What are the three categories of surgical robots based on robot-surgeon interaction?","Surgical robots are classified into three categories: Supervisory-Controlled Systems, Telesurgical Systems, and Shared-Control Systems."
+"What is the NeuroArm system and what procedures is it capable of performing?","NeuroArm is an MRI-compatible surgical system with two 7-DOF arms and haptic feedback, capable of microsurgery, image-guided biopsy, fine suturing, and thermocoagulation."
+"What are the two types of Minimally Invasive Surgery mentioned in the paper?","The two types of Minimally Invasive Surgery are robot-assisted MIS (RMIS) and non-robotic assisted surgery, also known as endoscopic surgery."
+"What is the CyberKnife system and what is its primary advantage over Gamma Knife?","CyberKnife is a frameless stereotactic radiosurgery alternative to Gamma Knife that uses a robotic arm with a linear accelerator and motion tracking to treat tumors non-invasively anywhere in the body."

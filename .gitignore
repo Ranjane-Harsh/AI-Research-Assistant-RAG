@@ -5,6 +5,7 @@ data/
 
 venv
 .venv
+.venv-ragas/
 
 __pycache__/
 *.pyc

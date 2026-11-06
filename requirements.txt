@@ -1,9 +1,9 @@
 # Core RAG framework
-langchain>=0.2.0
-langchain-community>=0.2.0
-langchain-huggingface>=0.0.3
-langchain-chroma>=0.1.0
-langchain-groq>=0.1.0
+langchain
+langchain-community>=0.3.0,<0.4.0
+langchain-huggingface
+langchain-chroma
+langchain-groq
 langchain-text-splitters
 langchain-core
 
@@ -21,9 +21,14 @@ chromadb>=0.5.0
 streamlit>=1.35.0
 
 # Evaluation
-ragas>=0.1.0
+ragas
 pandas>=2.0.0
 datasets>=2.0.0
+
+# Compatibility constraints
+numpy>=2,<3
+huggingface-hub<2
+Pillow<13
 
 # Utilities
 python-dotenv>=1.0.0
