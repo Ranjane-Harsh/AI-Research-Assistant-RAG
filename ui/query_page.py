@@ -43,5 +43,4 @@ def render():
                         if score is not None:
                             st.caption(f"**Cross-Encoder Relevance Score:** `{score:+.4f}`")
 
-                            st.info(doc.page_content)
-                            
+                        st.info(doc.page_content)
