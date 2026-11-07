@@ -1,4 +1,4 @@
-import fitz
+import pymupdf
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 import config
@@ -6,7 +6,7 @@ import re
 
 REF_PATTERN = re.compile(r"^\s*(\d+\.?\s*)?(REFERENCES|BIBLIOGRAPHY|LITERATURE CITED)\b", re.IGNORECASE)
 
-def block_header_footer(block_rect: fitz.Rect, page_height: float, page_num: int) -> bool:
+def block_header_footer(block_rect: pymupdf.Rect, page_height: float, page_num: int) -> bool:
     y0, y1 = block_rect.y0, block_rect.y1
 
     if page_num > 1 and y1 < (page_height * 0.06):
@@ -18,7 +18,7 @@ def block_header_footer(block_rect: fitz.Rect, page_height: float, page_num: int
     return False
 
 def load_pdf(filepath: str) -> list[Document]:
-    doc = fitz.open(filepath)
+    doc = pymupdf.open(filepath)
     total_pages = len(doc)
     pages = []
     stop_ingestion = False
@@ -39,7 +39,7 @@ def load_pdf(filepath: str) -> list[Document]:
             if not block_text:
                 continue
 
-            block_rect = fitz.Rect(b[:4])
+            block_rect = pymupdf.Rect(b[:4])
 
             if block_header_footer(block_rect, page_height, page_num):
                 continue

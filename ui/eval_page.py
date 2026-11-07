@@ -42,7 +42,7 @@ def render():
             dataset_path = DEFAULT_GOLDEN_DATASET
             preview_df = pd.read_csv(dataset_path)
             st.caption(f"Loaded `{DEFAULT_GOLDEN_DATASET}` ({len(preview_df)} Q&A pairs)")
-            st.dataframe(preview_df, use_container_width=True)
+            st.dataframe(preview_df, width="content")
         else:
             st.error(f"Default dataset `{DEFAULT_GOLDEN_DATASET}` not found.")
     else:
@@ -52,13 +52,13 @@ def render():
                 tmp.write(uploaded_csv.getvalue())
                 dataset_path = tmp.name
             preview_df = pd.read_csv(dataset_path)
-            st.dataframe(preview_df, use_container_width=True)
+            st.dataframe(preview_df, width="content")
 
     # --- Section 3: Run Evaluation ---
     st.divider()
     st.subheader("2. Execute Quantitative Evaluation")
 
-    if dataset_path and st.button("🚀 Run RAGAS Benchmark", type="primary", use_container_width=True):
+    if dataset_path and st.button("🚀 Run RAGAS Benchmark", type="primary", width="content"):
         progress_bar = st.progress(0.0)
         status_text = st.empty()
 
@@ -100,7 +100,7 @@ def render():
 
         # Full detailed dataframe
         st.subheader("Detailed Question-by-Question Breakdown")
-        st.dataframe(results_df, use_container_width=True)
+        st.dataframe(results_df, width="content")
 
         # Diagnostic Failure Analysis
         st.subheader("🔍 Automated Diagnostics")
